@@ -1,0 +1,39 @@
+# Configuration CGM Service
+# Toutes les valeurs peuvent être surchargées par variables d'environnement
+# préfixées par CGM_ (ex: CGM_PATIENT_URL, CGM_RETRY_ATTEMPTS)
+
+# Service info
+SERVICE_NAME = "CGM Service"
+SERVICE_VERSION = "1.0.0"
+
+# Patient Simulator
+
+
+PATIENT_URL = "https://patient-simulator-aizo53kahq-ew.a.run.app
+
+# HTTP Client timeouts (en secondes)
+HTTP_TIMEOUT_TOTAL = 5.0
+HTTP_TIMEOUT_CONNECT = 2.0
+HEALTH_CHECK_TIMEOUT = 2.0
+
+# Retry configuration
+RETRY_ATTEMPTS = 3
+RETRY_MULTIPLIER = 0.5
+RETRY_MIN_WAIT = 0.5
+RETRY_MAX_WAIT = 2.0
+
+# Rate limiting
+RATE_LIMIT = "20/minute"
+
+# Polling automatique (en secondes)
+POLLING_INTERVAL = 300  # 5 minutes
+
+# Glucose validation
+GLUCOSE_MIN = 20.0
+GLUCOSE_MAX = 600.0
+DEFAULT_SENSOR_ID = "CGM-001"
+
+# Firestore
+FIRESTORE_DATABASE = "patient-simulator-db"
+CGM_CACHE_COLLECTION = "cgm_cache"
+CGM_CACHE_DOCUMENT_ID = "latest"

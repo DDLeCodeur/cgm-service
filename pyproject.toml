@@ -1,0 +1,23 @@
+[project]
+name = "cgm-service"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dynaconf>=3.3.5",
+    "fastapi>=0.162.0",
+    "google-cloud-firestore>=2.34.1",
+    "httpx>=0.28.1",
+    "pydantic>=2.14.2",
+    "slowapi>=0.1.10",
+    "tenacity>=9.2.1",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "pytest-asyncio>=1.4.1.post1",
+    "respx>=0.23.1",
+]
